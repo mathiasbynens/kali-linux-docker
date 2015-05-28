@@ -9,3 +9,4 @@ echo "deb-src http://security.kali.org/kali-security kali/updates main contrib n
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update 
 RUN apt-get -y dist-upgrade
+RUN apt-get clean
