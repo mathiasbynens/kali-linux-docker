@@ -8,5 +8,7 @@ curl "http://git.kali.org/gitweb/?p=packages/debootstrap.git;a=blob_plain;f=scri
 sudo debootstrap sana ./kali-root http://repo.kali.org/kali ./kali-debootstrap &&\
 sudo tar -C kali-root -c . | sudo docker import - kalilinux/kali &&\
 sudo rm -rf ./kali-root &&\
-docker run -t -i kalilinux/kali cat /etc/debian_version &&\
+TAG=$(sudo docker run -t -i kalilinux/kali awk '{print $NF}' /etc/debian_version | sed 's/\r$//' ) &&\
+echo "Tagging kali with $TAG" &&\
+sudo docker tag kalilinux/kali:latest kalilinux/kali:$TAG &&\
 echo "Build OK" || echo "Build failed!"
