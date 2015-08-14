@@ -1,4 +1,4 @@
-FROM kalilinux/kali
+FROM officialkali/kali
 MAINTAINER steev@kali.org
 
 RUN echo "deb http://http.kali.org/kali kali main contrib non-free" > /etc/apt/sources.list && \
