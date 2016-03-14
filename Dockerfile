@@ -1,4 +1,4 @@
-FROM officialkali/kali
+FROM kalilinux/kali-linux-docker
 MAINTAINER steev@kali.org
 
 RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
