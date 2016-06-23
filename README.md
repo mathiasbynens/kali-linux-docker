@@ -3,4 +3,4 @@ This Kali Linux Docker image provides a minimal base install of the latest versi
 There are no tools added to this image, so you will need to install them yourself. 
 For details about Kali Linux metapackages, check https://www.kali.org/news/kali-linux-metapackages/
 
-Wed Jan 27 15:03:34 EST 2016
+Thu Jun 23 17:19:54 AST 2016
